@@ -43,8 +43,7 @@ void array_insert(CArray *array,int index,int element){
         temp = array->p[index];
         array->p[index] = element;
         element = temp;
-        index++;
-        array_insert(array,index,element);
+        array_insert(array,++index,element);
     }
     else array_append(array, element);
 };
